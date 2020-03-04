@@ -10,11 +10,11 @@ async function main() {
 
   results.forEach(result => {
     const author = result.people.find(p => p.role.fi === 'taiteilija')
-    console.log({
+    const image = result.multimedia.length> 0 ? { imageUrl: result.multimedia[0].jpg['500'] } : {}
+    console.log(Object.assign({}, {
       title: result.title.fi,
-      author: `${author.firstName} ${author.familyName}`,
-      imageUrl: result.multimedia[0].jpg['500'],
-    })
+      author: `${author.firstName} ${author.familyName}`
+    }, image))
   })
 }
 
