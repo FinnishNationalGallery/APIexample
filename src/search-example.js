@@ -13,9 +13,10 @@ async function main() {
     const image = result.multimedia.length> 0 ? { imageUrl: result.multimedia[0].jpg['500'] } : {}
     console.log(Object.assign({}, {
       title: result.title.fi,
-      author: `${author.firstName} ${author.familyName}`
+      author: author && `${author.firstName} ${author.familyName}`
     }, image))
   })
+  console.log(`${results.length} results`)
 }
 
 async function search(params) {
