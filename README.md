@@ -24,5 +24,5 @@ node src/dataset-example.js
 Using the curl command line tool:
 ```sh
 export API_KEY="<your api key here>"
-curl -o dataset.json --compress -H "x-api-key: $API_KEY" https://ww.kansallisgalleria.fi/api/v1/objects
+curl -o dataset.json --compress -H "x-api-key: $API_KEY" https://kokoelma.kansallisgalleria.fi/api/v1/objects
 ```
