@@ -25,7 +25,7 @@ async function search(params) {
 }
 
 const httpClient = axios.create({
-  baseURL: 'https://www.kansallisgalleria.fi/api',
+  baseURL: 'https://kokoelma.kansallisgalleria.fi/api',
   headers: {'x-api-key': API_KEY},
 })
 
